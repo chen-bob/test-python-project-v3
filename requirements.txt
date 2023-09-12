@@ -1,0 +1,24 @@
+# CVE-2020-1747: PyYAML <5.3.1
+#
+# https://jfrog.com/xray/contextual-vulnerabilities/ says:
+#
+# insufficient input validation in the PyYAML library allows unauthenticated network hackers to
+# perform code execution when passing a crafted YAML file.
+#
+# vuln func: full_load(), vuln class: FullLoader
+#
+# e.g.:
+# yaml.full_load(f)
+# yaml.FullLoader
+#
+# remediation:
+# use yaml.safe_load() or SafeLoader
+#
+# CVE-2020-5311: pillow <=6.2.1
+#
+# https://jfrog.com/xray/contextual-vulnerabilities/ says:
+#
+# an attacker can possibly supply crafted image files to be processed by checking that the Image.open function
+# is called with external input to its first (fp) argument.
+#
+PyYAML==5.2
