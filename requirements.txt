@@ -21,4 +21,4 @@
 # an attacker can possibly supply crafted image files to be processed by checking that the Image.open function
 # is called with external input to its first (fp) argument.
 #
-PyYAML==5.2
+PyYAML==5.4
